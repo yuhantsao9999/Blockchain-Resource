@@ -1,23 +1,66 @@
-# SimpleSwap
-Implement a **Simple AMM Swap** contract with a **0% fee** ratio in `contracts/SimpleSwap.sol`. Ensure that you **override all the external functions defined in `ISimpleSwap.sol`**, and that the implementation passes all the tests.
+## Foundry
 
-It is recommended to first read the NatSpec documentation in `ISimpleSwap.sol` before implementing the contract. If there are any uncertainties regarding the function's purpose or implementation, feel free to discuss them in the Discord channel.
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-Reference:
-- UniswapV2-core: https://github.com/Uniswap/v2-core
-- UniswapV2-periphery: https://github.com/Uniswap/v2-periphery
+Foundry consists of:
 
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Local Development
-You need Node.js 16+ to build. Use [nvm](https://github.com/nvm-sh/nvm) to install it.
+## Documentation
 
-Clone this repository, install Node.js dependencies, and build the source code:
+https://book.getfoundry.sh/
 
-```bash
-git clone git@github.com:AppWorks-School/Blockchain-Resource.git
-cd Blockchain-Resource/section3/SimpleSwap
-npm install
-npm run test:hardhat
-npm run test:foundry
+## Usage
+
+### Build
+
+```shell
+$ forge build
 ```
 
+### Test
+
+```shell
+$ forge test
+```
+
+### Format
+
+```shell
+$ forge fmt
+```
+
+### Gas Snapshots
+
+```shell
+$ forge snapshot
+```
+
+### Anvil
+
+```shell
+$ anvil
+```
+
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```
